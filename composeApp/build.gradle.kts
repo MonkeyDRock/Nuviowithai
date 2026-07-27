@@ -393,6 +393,9 @@ kotlin {
             }
 
             dependencies {
+
+                implementation("io.ktor:ktor-client-android:3.5.1")
+
                 implementation(libs.compose.uiToolingPreview)
                 implementation(libs.androidx.appcompat)
                 implementation(libs.androidx.activity.compose)
@@ -426,6 +429,11 @@ kotlin {
             }
         }
         commonMain.dependencies {
+
+            implementation("io.ktor:ktor-client-core:3.5.1")
+            implementation("io.ktor:ktor-client-content-negotiation:3.5.1")
+            implementation("io.ktor:ktor-serialization-kotlinx-json:3.5.1")
+
             implementation("io.coil-kt.coil3:coil-compose:${libs.versions.coil.get()}") {
                 exclude(group = "org.jetbrains.skiko", module = "skiko")
             }
